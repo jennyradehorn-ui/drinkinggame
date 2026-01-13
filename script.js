@@ -1,32 +1,60 @@
-function showCard() {
-  const card = cards[currentIndex];
-  const container = document.getElementById('card-container');
-  const textDiv = document.getElementById('card-text');
-  const catDiv = document.getElementById('card-category');
+let cards = [];
+let currentCard = null;
+let currentLang = 'sv';
 
-  // Text
-  textDiv.textContent = currentLang === 'sv' ? card.text_sv : card.text_en;
-  catDiv.textContent = card.cat;
+const cardElement = document.getElementById('card');
+const categoryElement = document.getElementById('category');
+const textElement = document.getElementById('text');
+const nextBtn = document.getElementById('next-btn');
 
-  // Ta bort gamla emoji-klasser
-  container.className = "";
-  
-  // Färg + emoji-klass per kategori
-  switch(card.cat) {
-    case 'Rösta tyst': container.style.backgroundColor = '#f28b82'; container.classList.add('rösta'); break;
-    case 'Dare or drink': container.style.backgroundColor = '#fbbc04'; container.classList.add('dare'); break;
-    case 'Truth or drink': container.style.backgroundColor = '#34a853'; container.classList.add('truth'); break;
-    case 'Drick om': container.style.backgroundColor = '#4285f4'; container.classList.add('drickom'); break;
-    case 'Snurra flaskan': container.style.backgroundColor = '#9c27b0'; container.classList.add('snurra'); break;
-    case 'Vote to drink': container.style.backgroundColor = '#00bfa5'; container.classList.add('vote'); break;
-    case 'All inclusive': container.style.backgroundColor = '#ff6d00'; container.classList.add('allinclusive'); break;
-    case 'Övrigt': container.style.backgroundColor = '#8d6e63'; container.classList.add('other'); break;
-    default: container.style.backgroundColor = '#000'; break;
-  }
+// Hämta kortdata
+fetch('cards.json')
+    .then(response => response.json())
+    .then(data => {
+        cards = data;
+    })
+    .catch(err => {
+        console.error("Kunde inte ladda cards.json:", err);
+        textElement.innerText = "Kunde inte ladda korten. Kolla formatet i cards.json!";
+    });
 
-  // Fade-in animation
-  container.style.opacity = 0;
-  setTimeout(() => { container.style.opacity = 1; }, 50);
-  container.style.transform = "scale(1.05)";
-  setTimeout(() => { container.style.transform = "scale(1)"; }, 200);
+// Språkfunktion
+function setLanguage(lang) {
+    currentLang = lang;
+    
+    // Uppdatera knappar
+    document.getElementById('btn-sv').classList.toggle('active', lang === 'sv');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+    if (currentCard) {
+        updateCardDisplay();
+    }
 }
+
+// Slumpa kort
+function showRandomCard() {
+    if (cards.length === 0) return;
+    
+    currentCard = cards[Math.floor(Math.random() * cards.length)];
+    
+    // Animation: "Pop" effekt när man byter kort
+    cardElement.style.transform = "scale(0.8) rotate(-5deg)";
+    
+    setTimeout(() => {
+        updateCardDisplay();
+        cardElement.style.transform = "scale(1) rotate(0deg)";
+    }, 100);
+}
+
+// Uppdatera skärmen
+function updateCardDisplay() {
+    categoryElement.innerText = currentCard.cat + " ✨";
+    textElement.innerText = currentCard['text_' + currentLang];
+
+    // Byt färgklass
+    cardElement.className = 'card'; // Nollställ
+    const categoryClass = 'cat-' + currentCard.cat.toLowerCase().replace(/\s+/g, '-');
+    cardElement.classList.add(categoryClass);
+}
+
+nextBtn.addEventListener('click', showRandomCard);
