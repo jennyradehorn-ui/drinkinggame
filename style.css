@@ -1,128 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap');
-
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    font-family: 'Arial', sans-serif;
+    background-color: #fdf5f0; /* Den ljusa färgen från din bild */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
-    color: #444;
+    text-align: center;
 }
 
 .game-container {
-    text-align: center;
     width: 90%;
-    max-width: 400px;
-    z-index: 10;
+    max-width: 500px;
 }
 
-/* Språkval */
-.language-switch {
+.main-title {
+    color: #f7a1bd; /* Din rosa färg */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.language-section p {
+    color: #444;
     margin-bottom: 15px;
+}
+
+.lang-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
+/* Knapparna från din bild */
 .lang-btn {
-    background: rgba(255, 255, 255, 0.4);
-    border: 2px solid white;
-    border-radius: 20px;
-    color: #ff6b6b;
-    padding: 8px 18px;
-    cursor: pointer;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    color: white;
     font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
-    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.lang-btn.active {
-    background: white;
-    color: #ff4757;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-}
+.sv-btn { background-color: #f7a1bd; } /* Rosa */
+.en-btn { background-color: #9cd8f5; } /* Blå */
 
-/* Kortet */
+/* Kort-sektionen */
+.hidden { display: none; }
+
 .card {
-    background: white;
-    padding: 40px 25px;
-    border-radius: 40px;
-    box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2);
-    min-height: 300px;
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 25px;
-    border: 8px solid white;
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.5s ease;
-}
-
-h2 {
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.2rem;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 15px;
-    border-radius: 15px;
-    display: inline-block;
-    align-self: center;
+    transition: background-color 0.4s ease;
 }
 
-p {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.4;
-    margin: 0;
+#category {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    opacity: 0.7;
 }
 
-/* Knappen */
-.main-btn {
-    background: #ff6b6b;
+#text {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.next-btn {
+    background-color: #f7a1bd;
     color: white;
     border: none;
-    padding: 20px;
-    font-size: 1.4rem;
-    font-family: 'Fredoka One', cursive;
-    border-radius: 50px;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
     cursor: pointer;
-    box-shadow: 0 8px 0 #ee5253;
-    transition: all 0.1s;
-    width: 100%;
+    margin-top: 10px;
 }
 
-.main-btn:active {
-    box-shadow: 0 2px 0 #ee5253;
-    transform: translateY(6px);
+.back-btn {
+    display: block;
+    margin: 20px auto;
+    background: none;
+    border: none;
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
-/* Kategorifärger */
-.cat-rösta-tyst { background-color: #e0c3fc; } 
-.cat-dare-or-drink { background-color: #ff9a9e; }
-.cat-truth-or-drink { background-color: #a18cd1; }
-.cat-drick-om { background-color: #fbc2eb; }
-.cat-snurra-flaskan { background-color: #84fab0; }
-.cat-vote-to-drink { background-color: #ffecd2; }
-.cat-all-inclusive { background-color: #cfd9df; }
-.cat-övrigt { background-color: #a6c1ee; }
-
-/* Bakgrundsbubblor */
-.bg-bubble {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    z-index: 1;
-    animation: float 15s infinite ease-in-out;
-}
-.bubble-1 { width: 120px; height: 120px; top: 10%; left: -20px; }
-.bubble-2 { width: 180px; height: 180px; bottom: 5%; right: -30px; animation-delay: 2s; }
-.bubble-3 { width: 60px; height: 60px; top: 50%; right: 15%; animation-delay: 5s; }
-
-@keyframes float {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    33% { transform: translate(30px, -50px) rotate(10deg); }
-    66% { transform: translate(-20px, 20px) rotate(-10deg); }
-}
+/* Kategorifärger - Mjuka pasteller som passar din stil */
+.cat-rösta-tyst { background-color: #fce4ec; }
+.cat-dare-or-drink { background-color: #fff1f1; border: 2px solid #f7a1bd; }
+.cat-truth-or-drink { background-color: #e3f2fd; }
+.cat-drick-om { background-color: #fff9c4; }
+.cat-snurra-flaskan { background-color: #e8f5e9; }
+.cat-vote-to-drink { background-color: #f3e5f5; }
+.cat-all-inclusive { background-color: #efebe9; }
+.cat-övrigt { background-color: #f0f4f8; }
