@@ -1,5 +1,4 @@
 [
-  /* Rösta tyst */
   {"cat":"Rösta tyst","text_sv":"Vem hade du helst gjort ett sex tape med","text_en":"Who would you most like to make a sex tape with"},
   {"cat":"Rösta tyst","text_sv":"Vem hade du helst gift dig med","text_en":"Who would you most like to marry"},
   {"cat":"Rösta tyst","text_sv":"Most likely att ligga utomhus","text_en":"Most likely to have sex outdoors"},
@@ -30,11 +29,7 @@
   {"cat":"Rösta tyst","text_sv":"Vem kommer aldrig finna kärlek","text_en":"Who will never find love"},
   {"cat":"Rösta tyst","text_sv":"Vem har sämst smak i partner","text_en":"Who has the worst taste in partners"},
   {"cat":"Rösta tyst","text_sv":"Vem hade varit tillsammans med någon de inte älskade","text_en":"Who would be with someone they didn't love"},
-  {"cat":"Rösta tyst","text_sv":"Vem är mest trolig att va med i en trekant","text_en":"Who is most likely to join a threesome"}
-
-
-
-  /* Dare or drink */
+  {"cat":"Rösta tyst","text_sv":"Vem är mest trolig att va med i en trekant","text_en":"Who is most likely to join a threesome"},
   {"cat":"Dare or drink","text_sv":"Matcha med någon på en dejtingapp och skriv att 'Du ser precis ut som min mamma/pappa'","text_en":"Match with someone on a dating app and write 'You look just like my mom/dad'"},
   {"cat":"Dare or drink","text_sv":"Låt båda spelarna bredvid dig ge dig en puss på kinden samtidigt","text_en":"Let both players next to you give you a kiss on the cheek at the same time"},
   {"cat":"Dare or drink","text_sv":"Ring två olika kompisar och låt de prata med varandra på högtalare","text_en":"Call two different friends and let them talk to each other on speaker"},
@@ -118,10 +113,7 @@
   {"cat":"Dare or drink","text_sv":"Alla röstar på ett objekt som du ska ta en selfie med och lägga upp på storyn","text_en":"Everyone votes on an object you take a selfie with and post on your story"},
   {"cat":"Dare or drink","text_sv":"Act out en scen från en film. Den som gissar filmen först får ge ut en drink","text_en":"Act out a movie scene. Whoever guesses first gives out a drink"},
   {"cat":"Dare or drink","text_sv":"Välj någon som ska massera dig i 1 min. Vägrar de så dricker de","text_en":"Choose someone to massage you for 1 minute. If they refuse, they drink"},
-  {"cat":"Dare or drink","text_sv":"Byt tröja med någon","text_en":"Swap a shirt with someone"}
-
-
-  /* Truth or drink */
+  {"cat":"Dare or drink","text_sv":"Byt tröja med någon","text_en":"Swap a shirt with someone"},
   {"cat":"Truth or drink","text_sv":"Vad är det största age gapaet mellan dig och de du legat med","text_en":"What is the biggest age gap between you and someone you’ve slept with"},
   {"cat":"Truth or drink","text_sv":"Berätta om ditt värsta ligg","text_en":"Tell about your worst sexual encounter"},
   {"cat":"Truth or drink","text_sv":"Vad är det värsta som hänt under sex","text_en":"What is the worst thing that has happened during sex"},
@@ -136,10 +128,7 @@
   {"cat":"Truth or drink","text_sv":"Vem är snyggast i rummet","text_en":"Who is the hottest in the room"},
   {"cat":"Truth or drink","text_sv":"Vad var den senaste positionen du gjorde","text_en":"What was the last sexual position you did"},
   {"cat":"Truth or drink","text_sv":"Vem hade kunnat få dig att komma snabbast av alla i rummet","text_en":"Who could make you climax the fastest in the room"},
-  {"cat":"Truth or drink","text_sv":"Vem hade du helst hånglat med","text_en":"Who would you most like to make out with"}
-
-
-  /* Drick om */
+  {"cat":"Truth or drink","text_sv":"Vem hade du helst hånglat med","text_en":"Who would you most like to make out with"},
   {"cat":"Drick om","text_sv":"Du rakat dig i en specifik form","text_en":"You have shaved in a specific shape"},
   {"cat":"Drick om","text_sv":"Om du haft trekant","text_en":"If you’ve had a threesome"},
   {"cat":"Drick om","text_sv":"Du inte legat på över en vecka","text_en":"If you haven’t had sex in over a week"},
@@ -173,10 +162,7 @@
   {"cat":"Drick om","text_sv":"Du har kollat mobilen under sex","text_en":"If you’ve checked your phone during sex"},
   {"cat":"Drick om","text_sv":"Du är längre än personen som drog kortet","text_en":"If you’re taller than the person who drew the card"},
   {"cat":"Drick om","text_sv":"Du är kortare än personen som drog kortet","text_en":"If you’re shorter than the person who drew the card"},
-  {"cat":"Drick om","text_sv":"Du kysst någon i rummet","text_en":"If you’ve kissed someone in the room"}
-
-
-  /* Snurra flaskan */
+  {"cat":"Drick om","text_sv":"Du kysst någon i rummet","text_en":"If you’ve kissed someone in the room"},
   {"cat":"Snurra flaskan","text_sv":"Snurra 2 gånger. De två tävlar i armhävningar, den som gör minst dricker","text_en":"Spin 2 times. The two compete in push-ups; the one who does fewer drinks"},
   {"cat":"Snurra flaskan","text_sv":"Act out så många sexställningar ni kan på 2 minuter","text_en":"Act out as many sexual positions as you can in 2 minutes"},
   {"cat":"Snurra flaskan","text_sv":"Byt glas med personen flaskan pekar på","text_en":"Swap glasses with the person the bottle points to"},
@@ -190,10 +176,7 @@
   {"cat":"Snurra flaskan","text_sv":"Ta varsin shot medan ni kramas","text_en":"Take a shot each while hugging"},
   {"cat":"Snurra flaskan","text_sv":"Kyss personen flaskan pekar på","text_en":"Kiss the person the bottle points to"},
   {"cat":"Snurra flaskan","text_sv":"Visa varderas mest spelade låt. Resten röstar om vilken som är bäst","text_en":"Show each other’s most played song. The rest vote on which is best"},
-  {"cat":"Snurra flaskan","text_sv":"Snurra två gånger och låt spelarna tävla i tumkrig. Bäst av 3, vinnaren ger ut en shot","text_en":"Spin twice and have the players compete in thumb wrestling. Best of 3; the winner gives out a shot"}
-
-
-  /* Vote to drink */
+  {"cat":"Snurra flaskan","text_sv":"Snurra två gånger och låt spelarna tävla i tumkrig. Bäst av 3, vinnaren ger ut en shot","text_en":"Spin twice and have the players compete in thumb wrestling. Best of 3; the winner gives out a shot"},
   {"cat":"Vote to drink","text_sv":"Vem kommer snea ikväll","text_en":"Who will get wasted tonight"},
   {"cat":"Vote to drink","text_sv":"Vem hade fortsatt vara kompis med sitt ex","text_en":"Who would stay friends with their ex"},
   {"cat":"Vote to drink","text_sv":"Vem hade gått tillbaka till sitt ex","text_en":"Who would go back to their ex"},
@@ -211,10 +194,7 @@
   {"cat":"Vote to drink","text_sv":"Vem är mest lightweight","text_en":"Who is most lightweight (drinks less)"},
   {"cat":"Vote to drink","text_sv":"Vem har bäst klädsmak","text_en":"Who has the best fashion sense"},
   {"cat":"Vote to drink","text_sv":"Blindfolded eller handcuffed? Förlorande laget vinner","text_en":"Blindfolded or handcuffed? Losing team wins"},
-  {"cat":"Vote to drink","text_sv":"Vem gillar dirty talk","text_en":"Who likes dirty talk"}
-
-
-  /* All inclusive */
+  {"cat":"Vote to drink","text_sv":"Vem gillar dirty talk","text_en":"Who likes dirty talk"},
   {"cat":"All inclusive","text_sv":"Simon says i en runda","text_en":"Simon says for one round"},
   {"cat":"All inclusive","text_sv":"Säg ett ord. Gå varvet runt medan alla säger något som rimmar på det. Den som misslyckas dricker","text_en":"Say a word. Go around while everyone says something that rhymes. Whoever fails drinks"},
   {"cat":"All inclusive","text_sv":"Staring contest mellan alla. Den som blinkar först dricker, den som blinkar sist väljer någon som dricker","text_en":"Staring contest between everyone. The first to blink drinks, the last to blink chooses someone to drink"},
@@ -232,10 +212,7 @@
   {"cat":"All inclusive","text_sv":"I en ring, skicka runt en papperslapp via munnen (suck and blow). Första som misslyckas tar en shot","text_en":"In a circle, pass a paper through your mouth (suck and blow). The first to fail takes a shot"},
   {"cat":"All inclusive","text_sv":"Drick en sip för varje person du kysst i rummet","text_en":"Drink a sip for every person you’ve kissed in the room"},
   {"cat":"All inclusive","text_sv":"Alla förutom du dricker","text_en":"Everyone drinks except you"},
-  {"cat":"All inclusive","text_sv":"Ta en shot, snurra 30 varv och försök gå i en rak linje","text_en":"Take a shot, spin 30 times, and try to walk in a straight line"
-
-  
-  /* Övrigt */
+  {"cat":"All inclusive","text_sv":"Ta en shot, snurra 30 varv och försök gå i en rak linje","text_en":"Take a shot, spin 30 times, and try to walk in a straight line"},
   {"cat":"Övrigt","text_sv":"Spara kortet och dra med någon annan i en runda","text_en":"Keep the card and draw with someone else for one round"},
   {"cat":"Övrigt","text_sv":"Spara kortet och få någon annan att dricka istället för dig","text_en":"Keep the card and make someone else drink instead of you"},
   {"cat":"Övrigt","text_sv":"Spara kortet och få någon annan att dricka dubbelt","text_en":"Keep the card and make someone else drink twice"},
@@ -249,6 +226,5 @@
   {"cat":"Övrigt","text_sv":"Låt de andra hälla i lite av sin dricka i din","text_en":"Let the others pour some of their drink into yours"},
   {"cat":"Övrigt","text_sv":"Never have I ever","text_en":"Never have I ever"},
   {"cat":"Övrigt","text_sv":"Drick ditt bodycount","text_en":"Drink your bodycount"},
-  {"cat":"Övrigt","text_sv":"Utan att visa de andra kortet: Ge till personen som kommer bli milf/dilf, mest big dick energy, mest attraktiv, behöver ligga snart, resa fram/åter i tiden","text_en":"Without showing the others the card: Give to the person who will be MILF/DILF, has the most big dick energy, most attractive, needs to hook up soon, wants to travel forward/back in time"}
-
+  {"cat":"Övrigt","text_sv":"Ge till personen som kommer bli MILF/DILF, har mest Big Dick Energy, eller är mest attraktiv.","text_en":"Give to the person who will be MILF/DILF, has the most Big Dick Energy, or is most attractive."}
 ]
