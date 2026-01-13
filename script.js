@@ -13,7 +13,7 @@ fetch('Cards.json')
 document.querySelectorAll('#language-selection button').forEach(btn => {
   btn.addEventListener('click', () => {
     currentLang = btn.dataset.lang;
-    document.getElementById('language-selection').style.display = 'none';
+    document.getElementById('start-menu').style.display = 'none';
     document.getElementById('game').style.display = 'block';
   });
 });
@@ -35,8 +35,9 @@ document.getElementById('next-card').addEventListener('click', () => {
 function showCard() {
   const card = cards[currentIndex];
   const container = document.getElementById('card-container');
-  container.textContent = currentLang === 'sv' ? card.text_sv : card.text_en;
-  
+  document.getElementById('card-text').textContent = currentLang === 'sv' ? card.text_sv : card.text_en;
+  document.getElementById('card-category').textContent = card.cat;
+
   // Färg per kategori
   switch(card.cat) {
     case 'Rösta tyst': container.style.backgroundColor = '#f28b82'; break;
