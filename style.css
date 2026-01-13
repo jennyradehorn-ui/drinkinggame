@@ -11,9 +11,9 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
   color: #ff6f91;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -24,32 +24,52 @@ button {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 button:hover {
   transform: scale(1.1);
+  background-color: #ffe0e6;
 }
 
 #card-container {
   margin: 20px 0;
-  padding: 20px;
-  border-radius: 20px;
-  min-height: 150px;
+  padding: 25px;
+  border-radius: 25px;
+  min-height: 180px;
   width: 90%;
   max-width: 500px;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.3s, opacity 0.5s;
+  opacity: 1;
 }
 
 #card-category {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.9;
 }
+
+/* Emoji-badge per kategori */
+#card-category::before {
+  content: "";
+  margin-right: 8px;
+}
+
+#card-container.rösta::before { content: "🤔 "; }
+#card-container.dare::before { content: "🎲 "; }
+#card-container.truth::before { content: "💬 "; }
+#card-container.drickom::before { content: "🍹 "; }
+#card-container.snurra::before { content: "🍾 "; }
+#card-container.vote::before { content: "🗳️ "; }
+#card-container.allinclusive::before { content: "🎉 "; }
+#card-container.other::before { content: "⭐ "; }
