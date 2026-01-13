@@ -7,14 +7,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="language-selection">
-    <button data-lang="sv">Svenska</button>
-    <button data-lang="en">English</button>
+  <!-- STARTMENY -->
+  <div id="start-menu">
+    <h1>🍹 Nellie & Jennys Drink Game 🍹</h1>
+    <p>Välj språk / Choose Language</p>
+    <div id="language-selection">
+      <button data-lang="sv">Svenska</button>
+      <button data-lang="en">English</button>
+    </div>
   </div>
 
+  <!-- SPELET -->
   <div id="game" style="display:none;">
     <button id="start-game">Starta spelet / Start Game</button>
-    <div id="card-container"></div>
+    <div id="card-container">
+      <div id="card-category"></div>
+      <div id="card-text"></div>
+    </div>
     <button id="next-card">Nästa kort / Next Card</button>
   </div>
 
