@@ -13,9 +13,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
 }
-h1 { color: #ff6f91; text-align: center; }
+
+h1 {
+  color: #ff6f91;
+  text-align: center;
+}
+
 button {
   padding: 12px 25px;
   margin: 5px;
@@ -23,9 +27,7 @@ button {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  transition: transform 0.2s, background-color 0.3s;
 }
-button:hover { transform: scale(1.1); background-color: #ffe0e6; }
 
 #card-container {
   margin: 20px 0;
@@ -41,34 +43,31 @@ button:hover { transform: scale(1.1); background-color: #ffe0e6; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: background-color 0.3s, transform 0.3s, opacity 0.5s;
-  opacity: 1;
 }
-#card-category { font-size: 16px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; opacity: 0.9; }
 
-#card-container.rösta::before { content: "🤔 "; }
-#card-container.dare::before { content: "🎲 "; }
-#card-container.truth::before { content: "💬 "; }
-#card-container.drickom::before { content: "🍹 "; }
-#card-container.snurra::before { content: "🍾 "; }
-#card-container.vote::before { content: "🗳️ "; }
-#card-container.allinclusive::before { content: "🎉 "; }
-#card-container.other::before { content: "⭐ "; }
+#card-category {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
 </style>
 </head>
 <body>
 
-<!-- Språkval -->
-<div id="start-menu">
+<!-- Startmeny -->
+<div id="start-menu" style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; text-align:center;">
   <h1>Nellie & Jenny's Drinking Game</h1>
   <p>Välj språk / Choose language:</p>
-  <button data-lang="sv">Svenska</button>
-  <button data-lang="en">English</button>
+  <div>
+    <button data-lang="sv" style="background-color:#f28b82;">Svenska</button>
+    <button data-lang="en" style="background-color:#34a853; color:white;">English</button>
+  </div>
 </div>
 
 <!-- Startknapp -->
-<div id="game" style="display:none;">
+<div id="game" style="display:none; text-align:center;">
   <button id="start-game">Start Game / Starta spelet</button>
 </div>
 
@@ -398,3 +397,151 @@ function showCard() {
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nellie & Jenny's Drinking Game</title>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff7f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #ff6f91;
+  text-align: center;
+}
+
+button {
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#card-container {
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 25px;
+  min-height: 180px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-category {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+</style>
+</head>
+<body>
+
+<!-- Startmeny -->
+<div id="start-menu" style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; text-align:center;">
+  <h1>Nellie & Jenny's Drinking Game</h1>
+  <p>Välj språk / Choose language:</p>
+  <div>
+    <button data-lang="sv" style="background-color:#f28b82;">Svenska</button>
+    <button data-lang="en" style="background-color:#34a853; color:white;">English</button>
+  </div>
+</div>
+
+<!-- Startknapp -->
+<div id="game" style="display:none; text-align:center;">
+  <button id="start-game">Start Game / Starta spelet</button>
+</div>
+
+<!-- Kortvisning -->
+<div id="card-container" style="display:none;">
+  <div id="card-category"></div>
+  <div id="card-text"></div>
+  <button id="next-card">Next Card / Nästa kort</button>
+</div>
+
+<script>
+// =================== ALLA KORT ===================
+// Här är ett exempel med 5 kort, ersätt med alla 252 kort
+const cards = [
+  { "cat": "Rösta tyst", "text_sv": "Vem hade du helst gjort ett sex tape med", "text_en": "Who would you most like to make a sex tape with" },
+  { "cat": "Rösta tyst", "text_sv": "Vem hade du helst gift dig med", "text_en": "Who would you most like to marry" },
+  { "cat": "Dare or drink", "text_sv": "Matcha med någon på en dejtingapp och skriv att ”Du ser precis ut som min mamma/pappa”", "text_en": "Match with someone on a dating app and write 'You look exactly like my mom/dad'" },
+  { "cat": "Truth or drink", "text_sv": "Vad är det största age gapaet mellan dig och de du legat med", "text_en": "What is the biggest age gap between you and people you've slept with" },
+  { "cat": "All inclusive", "text_sv": "Ta en shot, snurra 30 varv och försök gå i en rak linje", "text_en": "Take a shot, spin 30 times and try to walk in a straight line" }
+  // Lägg till resten av korten här
+];
+// ================================================
+
+let currentLang = 'sv';
+let currentIndex = 0;
+
+// Språkval
+document.querySelectorAll('#start-menu button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentLang = btn.dataset.lang;
+    document.getElementById('start-menu').style.display = 'none';
+    document.getElementById('game').style.display = 'block';
+  });
+});
+
+// Starta spel
+document.getElementById('start-game').addEventListener('click', () => {
+  currentIndex = 0;
+  document.getElementById('game').style.display = 'none';
+  document.getElementById('card-container').style.display = 'flex';
+  showCard();
+});
+
+// Nästa kort
+document.getElementById('next-card').addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex >= cards.length) currentIndex = 0;
+  showCard();
+});
+
+// Visa kort
+function showCard() {
+  const card = cards[currentIndex];
+  const container = document.getElementById('card-container');
+  const textDiv = document.getElementById('card-text');
+  const catDiv = document.getElementById('card-category');
+
+  textDiv.textContent = currentLang === 'sv' ? card.text_sv : card.text_en;
+  catDiv.textContent = card.cat;
+
+  switch(card.cat) {
+    case 'Rösta tyst': container.style.backgroundColor = '#f28b82'; break;
+    case 'Dare or drink': container.style.backgroundColor = '#fbbc04'; break;
+    case 'Truth or drink': container.style.backgroundColor = '#34a853'; break;
+    case 'Drick om': container.style.backgroundColor = '#4285f4'; break;
+    case 'Snurra flaskan': container.style.backgroundColor = '#9c27b0'; break;
+    case 'Vote to drink': container.style.backgroundColor = '#00bfa5'; break;
+    case 'All inclusive': container.style.backgroundColor = '#ff6d00'; break;
+    case 'Övrigt': container.style.backgroundColor = '#8d6e63'; break;
+    default: container.style.backgroundColor = '#000'; break;
+  }
+}
+</script>
+
+</body>
+</html>
+
